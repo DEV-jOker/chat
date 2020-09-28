@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Chat</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= render 'shared/nav' %>
-    <div class="container-fluid">
+    <div class="container-fluid main">
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-md-2 col-sm-12 affix">
           <% if user_signed_in? %>
             <h3>Chatrooms</h3>
             <ul>
@@ -28,11 +25,10 @@
             </ul>
           <% end %>
         </div>
-        <div class="col-sm-10">
-        <%= yield %>
+        <div class="col-md-10 offset-md-2 col-sm-12">
+          <%= yield %>
         </div>
       </div>
     </div>
-    
   </body>
 </html>
