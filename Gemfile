@@ -68,3 +68,5 @@ gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'boots
 gem 'jquery-rails', '~> 4.4'
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
+
+gem 'redis', '~> 4.2', '>= 4.2.2'
