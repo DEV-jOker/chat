@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @message  = @chatroom.messages.new(message_params)
     @message.user = current_user
     if @message.save 
-      redirect_to @chatroom
+      
     else
     end
   end
