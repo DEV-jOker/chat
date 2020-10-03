@@ -15,5 +15,8 @@ App.chatrooms = App.cable.subscriptions.create("ChatroomsChannel", {
       chatroom_link.addClass(bold_class)
     }
     
+  },
+  send_message:function(chatroom_id,message){
+    this.perform("send_message",{chatroom_id:chatroom_id, message: message})
   }
 });
